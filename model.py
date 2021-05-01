@@ -178,7 +178,7 @@ class Model(nn.Module):
         self.k_abn = self.num_segments // 10
         self.k_nor = self.num_segments // 10
 
-        self.Aggregate = Aggregate(len_feature=2048)
+        self.Aggregate = Aggregate(len_feature=4096)
         self.fc1 = nn.Linear(n_features, 512)
         self.fc2 = nn.Linear(512, 128)
         self.fc3 = nn.Linear(128, 1)
